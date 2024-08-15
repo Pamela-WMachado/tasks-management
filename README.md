@@ -26,20 +26,20 @@ $ ./mvnw clean package
 ```java 
 $ java -jar target/todolist-0.0.1-SNAPSHOT.jar
 ```
-A API poderá ser acessada em [localhost:8080](http://localhost:8080). O Swagger poderá ser visualizado em [localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html.
+A API poderá ser acessada em [localhost:8080](http://localhost:8080). O Swagger poderá ser visualizado em [localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html).
 ___
 ## API Endpoints
 Para fazer as requisições HTTP abaixo, foi utilizada a ferramenta [httpie](https://httpie.io/):
 * Criar tarefa
 ```java
-$ http POST :8080/todos name="Task 1" description="Descrip task 1" prioryti=1
+$ http POST :8080/todos name="Task 1" description="Descrip task 1" priority=1
 
 [
   {
     "id": 1,
     "name": "Task 1",
     "description": "Descrip task 1",   
-    "prioryti": 1,
+    "priority": 1,
     "done": false
   }
 ]
@@ -53,21 +53,21 @@ $ http POST :8080/todos
     "id": 1,
     "name": "Task 1",
     "description": "Descrip task 1",   
-    "prioryti": 1,
+    "priority": 1,
     "done": false
   }
 ]
 ```
 * Editar tarefa
 ```java
-$ http POST :8080/todos name="Task 1 edited" description="Descrip task 1 edited" prioryti=1
+$ http POST :8080/todos name="Task 1 edited" description="Descrip task 1 edited" priority=1
 
 [
   {
     "id": 1,
     "name": "Task 1 edited",
     "description": "Descrip task 1 edited",   
-    "prioryti": 1,
+    "priority": 1,
     "done": false
   }
 ]
