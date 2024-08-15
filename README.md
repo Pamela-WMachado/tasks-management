@@ -1,14 +1,14 @@
-#  _Tasks management list_  <h1>
+# _Tasks management list_
 API para gerenciamento de lista de tarefas (CRUD).
 
-## Tecnologias <h2>
+## Tecnologias 
 * [Spring Boot](https://spring.io/projects/spring-boot)
 * [Spring MVC](https://docs.spring.io/spring-framework/reference/web/webmvc.html)
 * [Spring Data JPA](https://spring.io/projects/spring-data-jpa)
 * [SpringDoc OpenAPI 3](https://springdoc.org/)
 * [Mysql](https://dev.mysql.com/downloads/) 
 ___
-## Práticas utilizadas <h2>
+## Práticas utilizadas 
 * SOLID, DRY, YAGNI, KISS
 * REST API
 * Consultas com Spring Data JPA
@@ -26,7 +26,7 @@ $ ./mvnw clean package
 ```java 
 $ java -jar target/todolist-0.0.1-SNAPSHOT.jar
 ```
-A API poderá ser acessada em <localhost:8080>. O Swagger poderá ser visualizado em <localhost:8080/swagger-ui.html>.
+A API poderá ser acessada em [localhost:8080](http://localhost:8080). O Swagger poderá ser visualizado em [localhost:8080/swagger-ui/index.html](http://localhost:8080/swagger-ui/index.html.
 ___
 ## API Endpoints
 Para fazer as requisições HTTP abaixo, foi utilizada a ferramenta [httpie](https://httpie.io/):
