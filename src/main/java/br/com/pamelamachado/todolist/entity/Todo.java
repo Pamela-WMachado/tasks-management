@@ -1,6 +1,7 @@
 package br.com.pamelamachado.todolist.entity;
 
 import jakarta.persistence.*;
+import jakarta.validation.constraints.NotBlank;
 
 @Entity
 @Table(name = "tasks")
@@ -9,7 +10,9 @@ public class Todo {
     //estratégia de geração de valores para que o id seja gerado de forma sequencial no banco automaticamente
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    @NotBlank
     private String name;
+    @NotBlank
     private String description;
     private boolean done;
     private int priority;

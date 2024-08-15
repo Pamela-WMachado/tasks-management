@@ -32,8 +32,27 @@ class TodolistApplicationTests {
 				.jsonPath("$[0].priority").isEqualTo(todo.getPriority());
 	}
 
-	void createTaskFailure() {
-
+	@Test
+	void testCreateTaskFailure() {
+		webTestClient
+				.post()
+				.uri("/todos")
+				.bodyValue(
+						new Todo("", " ", false, 0)
+				).exchange()
+				.expectStatus().isBadRequest();
 	}
+
+	//@Test
+//	void testUpdateTaskSuccess() {
+//		webTestClient
+//				.put()
+//				.uri("/todos")
+//				.bodyValue(
+//						new Todo("task1", "task descr", false, 2)
+//				).exchange()
+//				.expectStatus().isOk()
+//				.expectBody()
+//	}
 
 }
